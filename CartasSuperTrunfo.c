@@ -71,10 +71,10 @@ int main() {
     printf("População: %d\n", populacao1);
     printf("Área: %.2f km²\n", area1);
     printf("PIB: R$ %.2f bilhões de reais\n", pib1);
-    printf("Pontos: %d\n", pontos1);
+    printf("Pontos Turísticos: %d\n", pontos1);
     printf("Densidade Populacional: %.2f habitantes/km²\n", densidade1);
     printf("PIB per capita: R$ %.2f\n", pib_per_capita1);
-    
+
     printf("\nCarta: 2\n");
     printf("Estado: %c\n", estado2);
     printf("Código: %s\n", codigo2);
@@ -82,14 +82,76 @@ int main() {
     printf("População: %d\n", populacao2);
     printf("Área: %.2f km²\n", area2);
     printf("PIB: R$ %.2f bilhões de rais\n", pib2);
-    printf("Pontos: %d\n", pontos2);
+    printf("Pontos Turísticos: %d\n", pontos2);
     printf("Densidade Populacional: %.2f habitantes/km²\n", densidade2);
     printf("PIB per capita: R$ %.2f\n", pib_per_capita2);
     
+    //Variavei de resultado das comparações carta 1
+    int resultadopoplacao1;
+    resultadopoplacao1 = (populacao1 > populacao2);
+    int resultadoarea1;
+    resultadoarea1 = (area1 < area2);
+    int resultadopib1;
+    resultadopib1 = (pib1 > pib2);
+    int resultadopontos1;
+    resultadopontos1 = (pontos1 > pontos2);
+    int resultadodensidade1;
+    resultadodensidade1 = (densidade1 < densidade2);
+    int resultadopib_per_capita1;
+    resultadopib_per_capita1 = (pib_per_capita1 > pib_per_capita2);
 
+    //Variavei de resultado das comparações carta 2
+    int resultadopoplacao2;
+    resultadopoplacao2 = (populacao2 > populacao1);
+    int resultadoarea2;
+    resultadoarea2 = (area2 < area1);
+    int resultadopib2;
+    resultadopib2 = (pib2 > pib1);
+    int resultadopontos2;
+    resultadopontos2 = (pontos2 > pontos1);
+    int resultadodensidade2;
+    resultadodensidade2 = (densidade2 < densidade1);
+    int resultadopib_per_capita2;
+    resultadopib_per_capita2 = (pib_per_capita2 > pib_per_capita1);
+    
+    //Supertrufo - soma de todas as comparações
+    float supertrunfo1 = populacao1 + area1 + pib1 + pontos1 + pib_per_capita1;
+    float supertrunfo2 = populacao2 + area2 + pib2 + pontos2 + pib_per_capita2;
+    int resultadoSuperTrunfo1;
+    int resultadosupertrunfo2;
+    resultadoSuperTrunfo1 = (supertrunfo1 > supertrunfo2);
+    resultadosupertrunfo2 = (supertrunfo2 > supertrunfo1);
 
     printf("\n--- Resultados da Comparação ---\n");
-     
+
+    printf("Super Trunfo - Carta 1: %.2f\n", supertrunfo1);
+    printf("Super Trunfo - Carta 2: %.2f\n", supertrunfo2); 
+
+    printf("\n--- Carta 1 (pontos) ---\n");
+    printf("populção: %d\n", resultadopoplacao1);
+    printf("area: %d\n", resultadoarea1);  
+    printf("pib: %d\n", resultadopib1);
+    printf("pontos: %d\n", resultadopontos1);
+    printf("densidade: %d\n", resultadodensidade1);
+    printf("pib per capita: %d\n", resultadopib_per_capita1);
+    printf("Super Trunfo: %d\n", resultadoSuperTrunfo1);
+    printf(" A carta 1 fez %d pontos na comparação.\n", resultadopoplacao1 + resultadoarea1 + resultadopib1 + resultadopontos1 + resultadodensidade1 + resultadopib_per_capita1 + resultadoSuperTrunfo1);
+
+    printf("\n--- Carta 2 (pontos) ---\n");
+    printf("populção: %d\n", resultadopoplacao2); 
+    printf("area: %d\n", resultadoarea2);
+    printf("pib: %d\n", resultadopib2);
+    printf("pontos: %d\n", resultadopontos2);
+    printf("densidade: %d\n", resultadodensidade2);
+    printf("pib per capita: %d\n", resultadopib_per_capita2);
+    printf("Super Trunfo: %d\n", resultadosupertrunfo2);
+    printf(" A carta 2 fez %d pontos na comparação.\n", resultadopoplacao2 + resultadoarea2 + resultadopib2 + resultadopontos2 + resultadodensidade2 + resultadopib_per_capita2 + resultadosupertrunfo2);
+
+  
+
+    
+
+
     
     
     
