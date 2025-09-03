@@ -14,6 +14,9 @@ int main() {
     float area1, area2;
     float pib1, pib2;
     int pontos1, pontos2;
+    // variáveis para comparação nivel intermediário
+    float densidade1, pib_per_capita1;
+    float densidade2, pib_per_capita2;
 
    
   // Área para entrada de dados
@@ -30,11 +33,15 @@ int main() {
     scanf(" %f", &area1);
     printf("Digite o PIB da cidade: ");
     scanf(" %f", &pib1);
-    printf("Digite os pontos da cidade (0 a 100): ");
+    printf("Digite o número de pontos turísticos da cidade: ");
     scanf(" %d", &pontos1);
 
+    // Cálculo da densidade populacional e PIB per capita após entrada dos dados
+    densidade1 = (float)populacao1 / area1;
+    pib_per_capita1 = (pib1 * 1e9) / (float)populacao1; // Convertendo PIB para reais
+
     printf("\nCadastro da segunda carta:\n");
-    printf("Digite uma letra para o Estado (A-H): "); 
+    printf("Digite uma letra para o Estado (A-H): ");
     scanf(" %c", &estado2);
     printf("Digite o código da cidade (3 dígitos): ");
     scanf(" %3s", codigo2);
@@ -49,7 +56,10 @@ int main() {
     printf("Digite os pontos da cidade (0 a 100): ");
     scanf(" %d", &pontos2);
 
-
+    // Cálculo da densidade populacional e PIB per capita após entrada dos dados
+    densidade2 = (float)populacao2 / area2;
+    pib_per_capita2 = (pib2 * 1e9) / (float)populacao2; // Convertendo PIB para reais 
+    
 
   // Área para exibição dos dados da cidade
 
@@ -62,9 +72,9 @@ int main() {
     printf("Área: %.2f km²\n", area1);
     printf("PIB: R$ %.2f bilhões de reais\n", pib1);
     printf("Pontos: %d\n", pontos1);
-    printf("Densidade Populacional: %.2f habitantes/km²\n", populacao1 / area1);
-    printf("PIB per capita: R$ %.2f\n", (pib1 * 1e9) / populacao1); // Convertendo PIB para reais
-
+    printf("Densidade Populacional: %.2f habitantes/km²\n", densidade1);
+    printf("PIB per capita: R$ %.2f\n", pib_per_capita1);
+    
     printf("\nCarta: 2\n");
     printf("Estado: %c\n", estado2);
     printf("Código: %s\n", codigo2);
@@ -73,10 +83,15 @@ int main() {
     printf("Área: %.2f km²\n", area2);
     printf("PIB: R$ %.2f bilhões de rais\n", pib2);
     printf("Pontos: %d\n", pontos2);
-    printf("Densidade Populacional: %.2f habitantes/km²\n", populacao2 / area2);
-    printf("PIB per capita: R$ %.2f\n", (pib2 * 1e9) / populacao2); // Convertendo PIB para reais
+    printf("Densidade Populacional: %.2f habitantes/km²\n", densidade2);
+    printf("PIB per capita: R$ %.2f\n", pib_per_capita2);
+    
+
 
     printf("\n--- Resultados da Comparação ---\n");
-
-return 0;
+     
+    
+    
+    
+    return 0;
 }
