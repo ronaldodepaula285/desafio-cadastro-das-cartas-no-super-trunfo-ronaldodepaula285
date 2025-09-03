@@ -2,7 +2,7 @@
 
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das cartas
-// Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
+// Objetivo: criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
 
 int main() {
 
@@ -19,7 +19,7 @@ int main() {
     float densidade2, pib_per_capita2;
 
    
-  // Área para entrada de dados
+  // Área para entrada de dados da primeira carta
     printf("Cadastro da primeira carta:\n");
     printf("Digite uma letra para o Estado (A-H): ");
     scanf(" %c", &estado1);
@@ -39,7 +39,7 @@ int main() {
     // Cálculo da densidade populacional e PIB per capita após entrada dos dados
     densidade1 = (float)populacao1 / area1;
     pib_per_capita1 = (pib1 * 1e9) / (float)populacao1; // Convertendo PIB para reais
-
+  // Área para entrada de dados da segunda carta
     printf("\nCadastro da segunda carta:\n");
     printf("Digite uma letra para o Estado (A-H): ");
     scanf(" %c", &estado2);
@@ -61,7 +61,7 @@ int main() {
     pib_per_capita2 = (pib2 * 1e9) / (float)populacao2; // Convertendo PIB para reais 
     
 
-  // Área para exibição dos dados da cidade
+  // Área para exibição dos dados das cidades
 
     printf("\n--- Cartas Cadastradas ---\n");
     printf("Carta: 1\n");
@@ -86,7 +86,7 @@ int main() {
     printf("Densidade Populacional: %.2f habitantes/km²\n", densidade2);
     printf("PIB per capita: R$ %.2f\n", pib_per_capita2);
     
-    //Variavei de resultado das comparações carta 1
+    //Variavei de resultado das comparações da carta 1 (pontuação)
     int resultadopoplacao1;
     resultadopoplacao1 = (populacao1 > populacao2);
     int resultadoarea1;
@@ -100,7 +100,7 @@ int main() {
     int resultadopib_per_capita1;
     resultadopib_per_capita1 = (pib_per_capita1 > pib_per_capita2);
 
-    //Variavei de resultado das comparações carta 2
+    //Variavei de resultado das comparações da carta 2 (pontuação)
     int resultadopoplacao2;
     resultadopoplacao2 = (populacao2 > populacao1);
     int resultadoarea2;
@@ -117,11 +117,13 @@ int main() {
     //Supertrufo - soma de todas as comparações
     float supertrunfo1 = populacao1 + area1 + pib1 + pontos1 + pib_per_capita1;
     float supertrunfo2 = populacao2 + area2 + pib2 + pontos2 + pib_per_capita2;
+
     int resultadoSuperTrunfo1;
     int resultadosupertrunfo2;
     resultadoSuperTrunfo1 = (supertrunfo1 > supertrunfo2);
     resultadosupertrunfo2 = (supertrunfo2 > supertrunfo1);
 
+    // resultados finais mostrando quanto cada carta pontuou
     printf("\n--- Resultados da Comparação ---\n");
 
     printf("Super Trunfo - Carta 1: %.2f\n", supertrunfo1);
