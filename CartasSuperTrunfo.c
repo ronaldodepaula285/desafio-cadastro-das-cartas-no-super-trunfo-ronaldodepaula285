@@ -62,6 +62,8 @@ int main() {
     printf("Área: %.2f km²\n", area1);
     printf("PIB: R$ %.2f bilhões de reais\n", pib1);
     printf("Pontos: %d\n", pontos1);
+    printf("Densidade Populacional: %.2f habitantes/km²\n", populacao1 / area1);
+    printf("PIB per capita: R$ %.2f\n", (pib1 * 1e9) / populacao1); // Convertendo PIB para reais
 
     printf("\nCarta: 2\n");
     printf("Estado: %c\n", estado2);
@@ -71,6 +73,10 @@ int main() {
     printf("Área: %.2f km²\n", area2);
     printf("PIB: R$ %.2f bilhões de rais\n", pib2);
     printf("Pontos: %d\n", pontos2);
+    printf("Densidade Populacional: %.2f habitantes/km²\n", populacao2 / area2);
+    printf("PIB per capita: R$ %.2f\n", (pib2 * 1e9) / populacao2); // Convertendo PIB para reais
+
+    printf("\n--- Resultados da Comparação ---\n");
 
 return 0;
 }
